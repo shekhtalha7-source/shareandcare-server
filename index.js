@@ -31,6 +31,10 @@ const JWKS = createRemoteJWKSet(
   new URL(`${process.env.FRONTEND_URI}/api/auth/jwks`),
 );
 
+
+// Middleware to verify the JWT token from the request header
+// Attaches the user info to req.user if the token is valid
+
 const verifyToken = async (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
   if (!token) {
