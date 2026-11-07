@@ -15,3 +15,12 @@ Built with Node.js, Express and MongoDB.
 1. Run `npm install`
 2. Create a `.env` file using `.env.example`
 3. Run `npm start`
+
+
+## Tech Stack
+
+- Node.js
+- Express
+- MongoDB
+- JWT authentication
+- Vercel (deployment)
