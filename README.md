@@ -29,3 +29,8 @@ Built with Node.js, Express and MongoDB.
 ## Live Server
 
 https://shareandcare-server.vercel.app
+
+
+## Author
+
+Made by Shake
