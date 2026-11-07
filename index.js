@@ -77,10 +77,20 @@ app.get("/events/recent", async (req, res) => {
   res.send(result);
 });
 
-// all upcoming events
+// all upcoming events (?type=Cleanup&search=winter)
 app.get("/events", async (req, res) => {
+  const { type, search } = req.query;
+  const query = { eventDate: { $gte: new Date() } };
+  if (type) query.eventType = type;
+  if (search) {
+    query.title = {
+      $regex: String(search).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+      $options: "i",
+    };
+  }
+
   const result = await eventCollection
-    .find({ eventDate: { $gte: new Date() } })
+    .find(query)
     .sort({ eventDate: 1 })
     .toArray();
   res.send(result);
