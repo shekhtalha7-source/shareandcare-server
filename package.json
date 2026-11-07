@@ -1,7 +1,7 @@
 {
   "name": "shareandcare-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "ackend server for the ShareAndCare community events platform",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
