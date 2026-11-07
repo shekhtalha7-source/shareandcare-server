@@ -53,6 +53,10 @@ const verifyToken = async (req, res, next) => {
   }
 };
 
+app.get("/health", (req, res) => {
+  res.send({ status: "ok" });
+});
+
 // create
 app.post("/add-event", verifyToken, async (req, res) => {
   const data = req.body;
