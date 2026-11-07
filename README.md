@@ -24,3 +24,8 @@ Built with Node.js, Express and MongoDB.
 - MongoDB
 - JWT authentication
 - Vercel (deployment)
+
+
+## Live Server
+
+https://shareandcare-server.vercel.app
